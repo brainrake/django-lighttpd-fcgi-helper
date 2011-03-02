@@ -9,7 +9,6 @@ DOMAIN='republicofpoker.com'
 
 ADMIN_MEDIA_PATH="/usr/share/pyshared/django/contrib/admin/media"
 
-
 #per-project settings
 EXTRA_CONFIG={
     'my_django_project':{
