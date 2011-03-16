@@ -5,7 +5,7 @@ this is the settings file for the lighttpd config generator
 
 #required settings
 BASE_PATH='/opt/dp'
-DOMAIN='republicofpoker.com'
+DOMAIN='example.com'
 
 ADMIN_MEDIA_PATH="/usr/share/pyshared/django/contrib/admin/media"
 
