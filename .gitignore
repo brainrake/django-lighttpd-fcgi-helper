@@ -1,0 +1,4 @@
+# match all top-level directories -- the projects
+/*/
+
+*.pyc

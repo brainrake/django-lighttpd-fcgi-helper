@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 """
-Output lighttpd configuration files for django projects in BASE_DIR.
+Output lighttpd configuration files for django projects in BASE_PATH.
 
-Any subdirectory of BASE_DIR which contains 'manage.py' is considered a project.
+Any subdirectory of BASE_PATH which contains 'manage.py' is considered a project.
 
 Projects will be served from http://<project>.DOMAIN by default
 
@@ -32,7 +32,7 @@ $HTTP["host"] =~ "%(domain)s" {
     "^(/.*)$" => "/fcgi$1",
   )
   alias.url = (
-    "/admin_media" => "%(ADMIN_MEDIA_PATH)",
+    "/admin_media" => "%(ADMIN_MEDIA_PATH)s",
     "/media" => "%(BASE_PATH)s/%(project)s/media",
   )
 }
@@ -58,6 +58,6 @@ for project in projects:
         'ADMIN_MEDIA_PATH':ADMIN_MEDIA_PATH,
         'domain': conf.get('domain',r"^%s.%s$" % (project,DOMAIN)),
         'project':project,
-        'socket':os.path.join(BASE_DIR,project,'socket'),
+        'socket':os.path.join(BASE_PATH, project, 'socket'),
     }
 
