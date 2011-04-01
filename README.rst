@@ -10,7 +10,7 @@ lighttpd-django.conf.py
 
 include the output of this script in your lighttpd config::
 
-    include_shell /path/to/script/lighttpd-django-conf.py
+    include_shell "/path/to/script/lighttpd-django.conf.py"
 
 To deploy a new project, just copy it into BASE_PATH and restart the
 web server. Your project should now be running under
